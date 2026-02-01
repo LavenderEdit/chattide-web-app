@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  /* Tema Claro (Light Tide) */
+  --background: #f8fafc;
+  /* Slate-50 */
+  --foreground: #0f172a;
+  /* Slate-900 */
+  --surface: #ffffff;
+  /* Blanco puro para tarjetas */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Tema Oscuro (Dark Tide) */
+    --background: #0f172a;
+    /* Slate-900 */
+    --foreground: #f8fafc;
+    /* Slate-50 */
+    --surface: #1e293b;
+    /* Slate-800 para tarjetas */
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Utilidad para ocultar scrollbar pero permitir scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
