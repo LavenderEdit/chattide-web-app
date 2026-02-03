@@ -52,12 +52,12 @@ export default function Home() {
 
         <div className="bg-slate-50 p-4 rounded-lg text-left text-sm space-y-2 mb-6 border border-slate-100">
           <p>
-            <span className="font-semibold text-slate-700">Email:</span>{" "}
-            {user?.email}
+            <span className="font-semibold text-slate-700">Correo:</span>{" "}
+            {user?.correo}
           </p>
           <p>
-            <span className="font-semibold text-slate-700">Rol:</span>{" "}
-            {user?.rol || "Usuario"}
+            <span className="font-semibold text-slate-700">Estado de cuenta:</span>{" "}
+            {user?.activo ? "Activo" : "Inactivo"}
           </p>
           <p>
             <span className="font-semibold text-slate-700">Token:</span>{" "}

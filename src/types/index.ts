@@ -3,9 +3,10 @@ export interface Usuario {
     id: number;
     nombre: string;
     apellido: string;
-    email: string; // En Java es 'correo', verificar el JSON de respuesta
-    fotoPerfilUrl?: string; // Puede ser null
-    rol?: string;
+    correo: string; // En Java es 'correo', verificar el JSON de respuesta
+    fotoPerfil?: string; // Puede ser null
+    activo: boolean;
+    fechaRegistro: string;
 }
 
 // Basado en AuthResponse.java
@@ -13,6 +14,7 @@ export interface AuthResponse {
     accessToken: string;
     refreshToken: string;
     tokenType: string;
+    expiresIn: number;
     usuario: Usuario;
 }
 
@@ -52,6 +54,6 @@ export interface Grupo {
 }
 
 export interface LoginRequest {
-    email: string;
+    correo: string;
     password: string;
 }
