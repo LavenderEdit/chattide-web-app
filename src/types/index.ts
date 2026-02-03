@@ -50,3 +50,8 @@ export interface Grupo {
     creadorId: number;
     esMiembro?: boolean; // Útil para la UI
 }
+
+export interface LoginRequest {
+    email: string;
+    password: string;
+}
