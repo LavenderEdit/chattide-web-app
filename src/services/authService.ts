@@ -1,6 +1,5 @@
 import { api } from '@/lib/axios';
-import { LoginRequest } from '@/types'; // Necesitaremos definir este tipo abajo si falta
-import { AuthResponse } from '@/types';
+import { LoginRequest, AuthResponse } from '@/types/auth';
 
 export const authService = {
     // Función para iniciar sesión
@@ -9,7 +8,6 @@ export const authService = {
         return data;
     },
 
-    // Función para registrarse (la usaremos más adelante)
     register: async (userData: any) => {
         const { data } = await api.post('/auth/register', userData);
         return data;

@@ -1,17 +1,18 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { AuthResponse, Usuario } from '@/types';
+import { AuthResponse } from '@/types/auth';
+import { UsuarioResponse } from '@/types/response';
 
 interface AuthState {
     accessToken: string | null;
     refreshToken: string | null;
-    user: Usuario | null;
+    user: UsuarioResponse | null;
     isAuthenticated: boolean;
 
     // Acciones (funciones que modifican el estado)
     setAuth: (data: AuthResponse) => void;
     logout: () => void;
-    updateUser: (user: Usuario) => void;
+    updateUser: (user: UsuarioResponse) => void;
 }
 
 export const useAuthStore = create<AuthState>()(
